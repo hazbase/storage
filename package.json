@@ -1,9 +1,20 @@
 {
   "name": "@hazbase/storage",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A lightweight SDK for the hazBase IPFS storage API (backed by Pinata).",
   "author": "IndieSquare Inc <info@hazbase.com>",
-  "keywords": ["hazBase", "backend", "ipfs", "storage", "web3", "typescript", "blockchain", "dapps", "evm", "ethereum"],
+  "keywords": [
+    "hazBase",
+    "backend",
+    "ipfs",
+    "storage",
+    "web3",
+    "typescript",
+    "blockchain",
+    "dapps",
+    "evm",
+    "ethereum"
+  ],
   "homepage": "https://lp.hazbase.com/",
   "repository": "hazbase/storage",
   "license": "Apache-2.0",
