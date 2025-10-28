@@ -1,6 +1,6 @@
 {
   "name": "@hazbase/storage",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A lightweight SDK for the hazBase IPFS storage API (backed by Pinata).",
   "author": "IndieSquare Inc <info@hazbase.com>",
   "keywords": [
