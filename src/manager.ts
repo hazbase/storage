@@ -1,11 +1,15 @@
 import { request } from './client';
 import { CID } from './types';
+import { assertValidCid } from './utils';
 import { ensureClientKeyActive, createRequestTransaction } from '@hazbase/auth';
 
 /** Unpin (remove) a CID from Pinata. */
 export async function unpin(cid: CID): Promise<any> {
+  // Validate + encode: this is an authenticated DELETE; an unvalidated cid
+  // interpolated into the path could escape the intended endpoint.
+  assertValidCid(cid);
   const clientKey = await ensureClientKeyActive(77);
-  const res = await request(`/unpin/${cid}`, 'DELETE', {}, clientKey);
+  const res = await request(`/unpin/${encodeURIComponent(cid)}`, 'DELETE', {}, clientKey);
 
   createRequestTransaction({
     functionId: 77,
